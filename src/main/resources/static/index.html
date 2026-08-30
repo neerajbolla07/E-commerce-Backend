@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShopCart</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header id="navbar" class="navbar hidden">
+<button class="logo" onclick="showProducts()">shop<span>cart</span></button>
+<div class="nav-search"><input id="searchInput" placeholder="Search products"><button id="searchBtn">🔍</button></div>
+<nav>
+<button id="homeBtn" class="nav-link active">Home</button>
+<button id="cartBtn" class="nav-link">Cart 🛒 <span id="cartCount">0</span></button>
+<button id="ordersBtn" class="nav-link">Orders</button>
+<button id="logoutBtn" class="nav-link">Logout</button>
+</nav></header>
+
+<section id="authView" class="auth-page">
+<div class="auth-brand"><div class="big-logo">shop<span>cart</span></div><h1>Everything you need, delivered.</h1><p>Shop products, manage your cart and track your orders.</p></div>
+<div class="auth-card">
+<div id="signupPanel"><h2>Create account</h2><p>Join ShopCart today</p>
+<form id="signupForm">
+<label>Username</label><input id="signupUname" required>
+<label>Name</label><input id="signupName" required>
+<label>Email</label><input id="signupEmail" type="email" required>
+<label>Password</label><input id="signupPass" type="password" required>
+<label>Phone</label><input id="signupPhno" required>
+<button class="amazon-btn">Create your account</button></form>
+<div class="switch">Already have an account? <button id="showLoginBtn">Sign in</button></div></div>
+<div id="loginPanel" class="hidden"><h2>Sign in</h2><p>Welcome back to ShopCart</p>
+<form id="loginForm"><label>Email</label><input id="loginEmail" type="email" required>
+<label>Password</label><input id="loginPass" type="password" required>
+<button class="amazon-btn">Sign in</button></form>
+<div class="switch">New to ShopCart? <button id="showSignupBtn">Create your account</button></div></div>
+</div></section>
+
+<main id="storeView" class="hidden">
+<section id="homeView"><div class="hero"><h1>Welcome to ShopCart</h1><p>Explore our latest products and great deals.</p></div>
+<div class="heading"><h2>Today's products</h2><span id="resultCount"></span></div><div id="productGrid" class="product-grid"></div></section>
+
+<section id="cartView" class="hidden"><div class="heading"><h1>Shopping Cart</h1><p>Review your items before checkout.</p></div><div id="cartContent"></div></section>
+
+<section id="ordersView" class="hidden"><div class="heading"><h1>Your Orders</h1><p>Track and review your previous orders.</p></div><div id="ordersContent"></div></section>
+</main>
+<div id="toast" class="toast"></div><script src="js/app.js"></script>
+</body></html>

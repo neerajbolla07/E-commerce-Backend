@@ -1,0 +1,12 @@
+package com.neeraj.EcommerceProject.repository;
+
+import com.neeraj.EcommerceProject.model.OrderItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface OrderItemRepository
+        extends JpaRepository<OrderItem, Integer> {
+
+    List<OrderItem> findByOrderId(int orderId);
+}
